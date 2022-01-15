@@ -1,0 +1,35 @@
+@model User
+
+    
+<form action="/home/register" method="post">
+  <div class="form-row align-items-center"  >
+    <div class="col-auto">
+     @* <label class="sr-only" for="inlineFormInput">Brand</label> *@
+      <input type="text" class="form-control mb-2"  placeholder="Enter Name ..." asp-for="Name">
+    </div>
+    <div class="col-auto">
+      @* <label class="sr-only" for="inlineFormInput">Model</label> *@
+      <input type="text" class="form-control mb-2"  placeholder="Enter Family..." asp-for="Family">
+    </div>
+    <div class="col-auto">
+      @* <label class="sr-only" for="inlineFormInput">Price</label> *@
+      <input type="text" class="form-control mb-2"  placeholder="Enter Identity_Number ..." asp-for="Identity_Number">
+    </div>
+    <div class="col-auto">
+      @* <label class="sr-only" for="inlineFormInput">Price</label> *@
+      <input type="text" class="form-control mb-2"  placeholder="Enter Phone Number ..." asp-for="Phone_Number">
+    </div>
+    <div class="col-auto">
+      @* <label class="sr-only" for="inlineFormInput">Price</label> *@
+      <input type="text" class="form-control mb-2"  placeholder="Enter Password..." asp-for="Password">
+    </div>
+    
+    
+    <div class="col-auto">
+      <button type="submit" class="btn btn-success mb-2">Register</button>
+      @* <h5>@DateTime.Now</h5> *@
+    </div>
+  </div>
+  
+</form>
+

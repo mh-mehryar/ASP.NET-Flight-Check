@@ -1,0 +1,39 @@
+@model Flight_info
+
+<form>
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <label for="inlineFormInput">AirLine</label>
+      <input type="text" class="form-control mb-2" value="@Model.Airline" asp-for="Airline">
+     
+    </div>
+    <div class="col-auto">
+      <label for="inlineFormInput">From</label>
+      <input type="text" class="form-control mb-2" value="@Model.From" asp-for="From">
+    </div>
+    <div class="col-auto">
+      <label for="inlineFormInput">To</label>
+      <input type="text" class="form-control mb-2"  value="@Model.To" asp-for="To">
+    </div>
+    <div class="col-auto">
+      <label for="inlineFormInput">Capacity</label>
+      <input type="text" class="form-control mb-2"  value="@Model.Capacity" asp-for="Capacity">
+    </div>
+    <div class="col-auto">
+      <label for="inlineFormInput">Flight_Date</label>
+      <input type="text" class="form-control mb-2"  value="@Model.Flight_Date" asp-for="Flight_Date">
+    </div>
+    <div class="col-auto">
+      <label for="inlineFormInput">Flight_Time</label>
+      <input type="text" class="form-control mb-2"  value="@Model.Flight_Time" asp-for="Flight_Time">
+    </div>
+
+    <input style="display:none" type="text" asp-for="Id">
+  
+    
+    <div class="col-auto">
+      @* <button type="submit" class="btn btn-primary mb-2"><a style="color: white;" href="/home/edit">Edit</a></button> *@
+      <button type="submit" value="Save" class="btn btn-primary mb-2">Update</button>
+    </div>
+  </div>
+</form>

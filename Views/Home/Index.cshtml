@@ -1,0 +1,63 @@
+﻿@* @{
+    ViewData["Title"] = "Home Page";
+} *@
+
+@model List<Flight_info>
+
+@* //search *@
+<div class="container">
+    <form asp-controller="Home" asp-action="Index">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+            <div class="search"> <i class="fa fa-search"></i> <input type="text" class="form-control"
+                    placeholder="Search Flight OrderBy Date" name="SearchText"> <button class="btn btn-primary">Search</button> </div>
+        </div>
+</form>
+<table style="margin-top:5px;" class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">AirLine</th>
+            <th scope="col">Persian Date</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Capacity</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            <th scope="col">Action</th>
+        </tr>
+
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            @* DateTime date = item.Flight_Date; *@
+
+            <tr>
+                <th scope="col">@item.Id</th>
+                <td>@item.Airline</td>
+                <td>@item.Flight_Date.ToShamsi()</td>
+                <td>@item.Flight_Date</td>
+                <td>@item.Flight_Time</td>
+                <td>@item.Capacity</td>
+                <td>@item.From</td>
+                <td>@item.To</td>
+
+                <td>
+                    <a class="btn btn-primary" href="/home/Reserve/@item.Id">Reserve</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+    </div>
+</div>
+@* //search end *@
+
